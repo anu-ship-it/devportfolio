@@ -73,4 +73,115 @@ skills: ["JavaScript", "React", "Node.js", "Python", "AWS", "Docker"]
 ```
 
 #### Projects
+```typescript
+projects: [
+    {
+        name: "Project Name",
+        description: "Brief description of what the project does and its impact",
+        link: "hhtps://github.com/yourusername/project",
+        skills: ["React", "Node.js", "AWS"], // Technologies used
+    }
+]
+```
 
+#### Experience
+```typescript
+experience: [
+    {
+        company: "Company Name",
+        title: "Your Job Title",
+        dateRange: {
+            "Led development of microservices architecutre serving 1M+ users",
+            "Reduced API response times by 40% through optimization",
+            "Mentored team of 5 junior developers",
+        },
+    }
+]
+```
+
+#### Education
+```typescript
+education: [
+    {
+        school: "University Name",
+        degree: "Bachelore of Science in Computer Science",
+        dateRange: [
+            "Graduated Manga Cum Laudde with 3.8 GPA",
+            "Deam's List all semesters",
+            "President of Computer Science Club"
+        ]
+    }
+]
+```
+
+### Icons
+
+The template uses [Tabler Icons](https://tabler.io/icons) for all icons. If you wish to add more icons and have it look consistent with what's already there, you can browwse through their extensive icon library.
+
+
+## Project Structure
+
+```
+devportfolio/
+├── public/
+│   └── favicon.svg          # Site favicon
+├── src/
+│   ├── components/          # Astro components
+│   │   ├── About.astro      # About section
+│   │   ├── Education.astro  # Education section
+│   │   ├── Experience.astro # Work experience section
+│   │   ├── Footer.astro     # Site footer
+│   │   ├── Header.astro     # Navigation header
+│   │   ├── Hero.astro       # Hero/intro section
+│   │   └── Projects.astro   # Projects showcase
+│   ├── pages/
+│   │   └── index.astro      # Main page layout
+│   ├── styles/
+│   │   └── global.css       # Global styles
+│   └── config.ts            # Site configuration
+├── astro.config.mjs         # Astro configuration
+├── package.json             # Project dependencies
+├── tailwind.config.js       # Tailwind configuration
+└── tsconfig.json            # TypeScript configuration
+```
+
+## Local Development
+
+If you'd like to run it locallly:
+
+```
+git clone https://github.com/anu-ship-it/devportfolio.git
+cd devportfolio
+npm install
+```
+
+After that, start up the Astro dev server with:
+
+```
+
+npm run dev
+```
+
+## Development
+
+The template can be deployed to any static hosting service easily (and in most cases, completely free). here are some options:
+
+- To deploy with Netlify, [click here](https://docs.astro.build/en/guides/deploy/netlify/).
+- To deploy with Vercel, [click here](https://docs.astro.build/en/guides/deploy/vercel/).
+- To deploy with GitHub Pages, [click here](https://docs.astro.build/en/guides/deploy/github/).
+- To deploy with Cloudflare Pages, [click here](https://docs.astro.build/en/guides/deploy/cloudflare/).
+- To deploy with Render, [click here](https://docs.astro.build/en/guides/deploy/render/).
+
+Want to deploy somewhere else? Find more guides [here](https://docs.astro.build/en/guides/deploy/).
+
+## Changelog
+
+To view the changelog, see CHANGELOG.md.
+
+## License
+
+This project is fully and completely MIT. See LICENSE.md.
+
+## Questions?
+
+Feel free to reach out on [X (Twitter)](https://x.com/Anoop670) if you have any questions or need help.
