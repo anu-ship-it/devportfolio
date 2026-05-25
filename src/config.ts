@@ -20,7 +20,8 @@ export const siteConfig = {
         "Node.js",
         "Python",
         "AWS",
-        "Docker"
+        "Docker",
+        "n8n"
     ],
 
     projects: [
