@@ -9,19 +9,24 @@ interface Props {
 
 const {
   title = site.seo.title,
-  description = site.seo.description
+  description = site.seo.description,
 } = Astro.props;
 ---
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" class="dark">
   <head>
+    <!-- Charset -->
     <meta charset="UTF-8" />
 
+    <!-- Viewport -->
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1.0"
+      content="width=device-width, initial-scale=1"
     />
+
+    <!-- SEO -->
+    <title>{title}</title>
 
     <meta
       name="description"
@@ -34,15 +39,30 @@ const {
     />
 
     <meta
+      name="keywords"
+      content={site.seo.keywords.join(", ")}
+    />
+
+    <meta
       name="theme-color"
       content="#09090B"
     />
 
-    <title>{title}</title>
+    <meta
+      name="color-scheme"
+      content="dark"
+    />
 
+    <!-- Canonical -->
     <link
-      rel="icon"
-      href="/favicon.ico"
+      rel="canonical"
+      href={site.url}
+    />
+
+    <!-- Open Graph -->
+    <meta
+      property="og:type"
+      content="website"
     />
 
     <meta
@@ -56,20 +76,16 @@ const {
     />
 
     <meta
-      property="og:type"
-      content="website"
-    />
-
-    <meta
       property="og:image"
       content={site.seo.image}
     />
 
     <meta
       property="og:url"
-      content={site.seo.url}
+      content={site.url}
     />
 
+    <!-- Twitter -->
     <meta
       name="twitter:card"
       content="summary_large_image"
@@ -88,6 +104,12 @@ const {
     <meta
       name="twitter:image"
       content={site.seo.image}
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="/favicon.ico"
     />
   </head>
 
