@@ -213,3 +213,585 @@ ul,
 ol {
   list-style: none;
 }
+
+/* ==========================================================
+   TYPOGRAPHY
+   ========================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+
+  color: var(--foreground);
+
+  font-weight: var(--weight-bold);
+
+  line-height: 1.1;
+
+  letter-spacing: -0.04em;
+
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 8vw, 5.75rem);
+}
+
+h2 {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+}
+
+h3 {
+  font-size: clamp(2rem, 5vw, 3rem);
+}
+
+h4 {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  color: var(--foreground-secondary);
+
+  font-size: var(--text-lg);
+
+  line-height: 1.8;
+
+  max-width: 72ch;
+}
+
+small {
+  color: var(--foreground-muted);
+}
+
+strong {
+  color: var(--foreground);
+
+  font-weight: 600;
+}
+
+code {
+  font-family: var(--font-mono);
+}
+
+pre {
+  font-family: var(--font-mono);
+}
+
+/* ==========================================================
+   LINKS
+   ========================================================== */
+
+a {
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--primary);
+}
+
+/* ==========================================================
+   TEXT SELECTION
+   ========================================================== */
+
+::selection {
+  background: rgba(79, 140, 255, 0.25);
+
+  color: white;
+}
+
+/* ==========================================================
+   FOCUS
+   ========================================================== */
+
+:focus-visible {
+  outline: 2px solid var(--primary);
+
+  outline-offset: 4px;
+
+  border-radius: 6px;
+}
+
+/* ==========================================================
+   CONTAINER
+   ========================================================== */
+
+.container {
+  width: min(100% - 2rem, var(--container));
+
+  margin-inline: auto;
+}
+
+/* ==========================================================
+   SECTIONS
+   ========================================================== */
+
+.section {
+  padding-block: clamp(5rem, 8vw, 8rem);
+}
+
+.section-sm {
+  padding-block: 3rem;
+}
+
+.section-lg {
+  padding-block: 10rem;
+}
+
+/* ==========================================================
+   GRID
+   ========================================================== */
+
+.grid {
+  display: grid;
+}
+
+.grid-2 {
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 2rem;
+}
+
+.grid-3 {
+  display: grid;
+
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+
+  gap: 2rem;
+}
+
+.grid-4 {
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 2rem;
+}
+
+/* ==========================================================
+   FLEX
+   ========================================================== */
+
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+}
+
+/* ==========================================================
+   SURFACES
+   ========================================================== */
+
+.surface {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-xl);
+}
+
+.surface-hover {
+  transition:
+    background var(--transition-base),
+    border-color var(--transition-base),
+    transform var(--transition-base);
+}
+
+.surface-hover:hover {
+  background: var(--surface-secondary);
+
+  border-color: var(--border-light);
+
+  transform: translateY(-2px);
+}
+
+/* ==========================================================
+   DIVIDER
+   ========================================================== */
+
+.divider {
+  width: 100%;
+
+  height: 1px;
+
+  background: var(--border);
+}
+
+/* ==========================================================
+   RESPONSIVE
+   ========================================================== */
+
+@media (max-width: 1024px) {
+
+  .grid-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+
+  p {
+    font-size: var(--text-base);
+  }
+
+  .container {
+    width: min(100% - 1.5rem, var(--container));
+  }
+
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .section {
+    padding-block: 5rem;
+  }
+
+}
+
+/* ==========================================================
+   BUTTON FOUNDATION
+   ========================================================== */
+
+.button-reset {
+  appearance: none;
+  border: none;
+  background: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .625rem;
+
+  height: 48px;
+  padding-inline: 1.25rem;
+
+  border-radius: var(--radius-md);
+
+  font-weight: 600;
+
+  transition:
+    background-color var(--transition-base),
+    border-color var(--transition-base),
+    color var(--transition-base),
+    transform var(--transition-fast),
+    box-shadow var(--transition-base);
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button:active {
+  transform: translateY(0);
+}
+
+.button-primary {
+  background: var(--primary);
+  color: white;
+}
+
+.button-primary:hover {
+  background: var(--primary-hover);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+}
+
+.button-secondary:hover {
+  background: var(--surface-secondary);
+  border-color: var(--border-light);
+}
+
+/* ==========================================================
+   CARD FOUNDATION
+   ========================================================== */
+
+.card {
+  background: var(--surface);
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius-xl);
+
+  padding: 2rem;
+
+  transition:
+    transform var(--transition-base),
+    border-color var(--transition-base),
+    background var(--transition-base);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+
+  border-color: var(--border-light);
+
+  background: var(--surface-secondary);
+}
+
+/* ==========================================================
+   BADGES
+   ========================================================== */
+
+.badge {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: .5rem;
+
+  padding: .45rem .85rem;
+
+  border-radius: var(--radius-full);
+
+  border: 1px solid var(--border);
+
+  background: var(--surface);
+
+  font-size: .875rem;
+
+  color: var(--foreground-secondary);
+}
+
+/* ==========================================================
+   LABELS
+   ========================================================== */
+
+.label {
+  color: var(--foreground-muted);
+
+  font-size: .875rem;
+
+  letter-spacing: .08em;
+
+  text-transform: uppercase;
+
+  font-weight: 600;
+}
+
+/* ==========================================================
+   UTILITIES
+   ========================================================== */
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-muted {
+  color: var(--foreground-muted);
+}
+
+.text-secondary {
+  color: var(--foreground-secondary);
+}
+
+.text-primary {
+  color: var(--foreground);
+}
+
+.text-accent {
+  color: var(--primary);
+}
+
+.w-full {
+  width: 100%;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.hidden {
+  display: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.rounded {
+  border-radius: var(--radius-md);
+}
+
+.rounded-lg {
+  border-radius: var(--radius-xl);
+}
+
+.border {
+  border: 1px solid var(--border);
+}
+
+.surface-bg {
+  background: var(--surface);
+}
+
+/* ==========================================================
+   BACKGROUND GRID
+   ========================================================== */
+
+.bg-grid {
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 48px 48px;
+}
+
+/* ==========================================================
+   FADE IN
+   ========================================================== */
+
+@keyframes fadeUp {
+
+  from {
+
+    opacity: 0;
+
+    transform: translateY(18px);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform: translateY(0);
+
+  }
+
+}
+
+.fade-up {
+
+  animation: fadeUp .6s ease both;
+
+}
+
+/* ==========================================================
+   SCROLLBAR
+   ========================================================== */
+
+::-webkit-scrollbar {
+
+  width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+  background: var(--background);
+
+}
+
+::-webkit-scrollbar-thumb {
+
+  background: var(--border);
+
+  border-radius: 999px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+  background: var(--border-light);
+
+}
+
+/* ==========================================================
+   REDUCED MOTION
+   ========================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+  *,
+  *::before,
+  *::after {
+
+    animation: none !important;
+
+    transition: none !important;
+
+    scroll-behavior: auto !important;
+
+  }
+
+}
+
+/* ==========================================================
+   PRINT
+   ========================================================== */
+
+@media print {
+
+  body {
+
+    background: white;
+
+    color: black;
+
+  }
+
+}
