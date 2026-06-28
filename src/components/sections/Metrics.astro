@@ -1,49 +1,42 @@
 ---
-import Container from "../ui/Container.astro";
-import Card from "../ui/Card.astro";
-import { metrics } from "../../data/metrics";
+import Section from "../ui/Section.astro";
+import metrics from "../../data/metrics";
 ---
 
-<section class="pb-24">
+<Section class="pt-0 lg:pt-0">
 
-  <Container>
+    <div
+        class="grid grid-cols-2 gap-x-10 gap-y-12 border-y border-[var(--border)] py-12 lg:grid-cols-4"
+    >
 
-    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+        {
+            metrics.map(metric => (
 
-      {
-        metrics.map((metric) => (
+                <div>
 
-          <Card>
+                    <h2
+                        class="text-5xl font-bold tracking-tight lg:text-6xl"
+                    >
+                        {metric.value}
+                    </h2>
 
-            <div class="space-y-3">
+                    <p
+                        class="mt-3 font-semibold"
+                    >
+                        {metric.label}
+                    </p>
 
-              <h3
-                class="text-4xl font-bold text-[var(--foreground)]"
-              >
-                {metric.value}
-              </h3>
+                    <p
+                        class="mt-2 text-sm leading-7 text-[var(--foreground-secondary)]"
+                    >
+                        {metric.description}
+                    </p>
 
-              <p
-                class="font-semibold text-white"
-              >
-                {metric.label}
-              </p>
+                </div>
 
-              <p
-                class="text-sm text-[var(--foreground-secondary)]"
-              >
-                {metric.description}
-              </p>
-
-            </div>
-
-          </Card>
-
-        ))
-      }
+            ))
+        }
 
     </div>
 
-  </Container>
-
-</section>
+</Section>

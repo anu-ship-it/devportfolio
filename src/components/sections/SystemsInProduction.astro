@@ -4,31 +4,25 @@ import Heading from "../ui/Heading.astro";
 import ProductCard from "../ui/ProductCard.astro";
 import { products } from "../../data/products";
 
-const featured = products.find(product => product.featured);
-
-const others = products.filter(product => !product.featured);
+const featured = products.find((p) => p.featured);
+const others = products.filter((p) => !p.featured);
 ---
 
 <Section>
 
     <Heading
-        eyebrow="FLAGSHIP PRODUCTS"
-        title="Products with real impact."
-        description="Every product begins with a real problem, is validated through feedback and continuously evolves with real users."
+        eyebrow="PRODUCT ECOSYSTEM"
+        title="Products solving real-world problems."
+        description="Each product represents a different intelligence domain."
     />
 
     {
         featured && (
 
-            <div class="mt-16">
+            <div class="mt-20">
 
                 <ProductCard
-                    category={featured.category}
-                    title={featured.name}
-                    tagline={featured.tagline}
-                    description={featured.description}
-                    status={featured.status}
-                    href={featured.href}
+                    {...featured}
                     featured
                 />
 
@@ -37,19 +31,26 @@ const others = products.filter(product => !product.featured);
         )
     }
 
-    <div class="mt-10 grid gap-8 lg:grid-cols-3">
+    <div
+        class="mt-10 grid gap-8 lg:grid-cols-12"
+    >
 
         {
-            others.map(product => (
+            others.map((product, index) => (
 
-                <ProductCard
-                    category={product.category}
-                    title={product.name}
-                    tagline={product.tagline}
-                    description={product.description}
-                    status={product.status}
-                    href={product.href}
-                />
+                <div
+                    class:list={[
+                        index === 2
+                            ? "lg:col-span-12"
+                            : "lg:col-span-6"
+                    ]}
+                >
+
+                    <ProductCard
+                        {...product}
+                    />
+
+                </div>
 
             ))
         }

@@ -2,26 +2,23 @@ export const metrics = [
   {
     value: "100+",
     label: "Active Users",
-    description: "Developers using TokenPulse every week.",
+    description: "Developers using TokenPulse."
   },
-
   {
     value: "4",
-    label: "Intelligence Systems",
-    description: "Products solving real-world problems.",
+    label: "AI Systems",
+    description: "Products across four intelligence domains."
   },
-
-  {
-    value: "AI",
-    label: "Core Focus",
-    description: "Automation, intelligent systems and decision engines.",
-  },
-
   {
     value: "24/7",
-    label: "Building",
-    description: "Continuously shipping, measuring and improving.",
+    label: "Shipping",
+    description: "Continuous iteration and deployment."
   },
+  {
+    value: "∞",
+    label: "Learning",
+    description: "Always experimenting with new AI technologies."
+  }
 ];
 
 export default metrics;

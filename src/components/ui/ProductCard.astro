@@ -3,156 +3,192 @@ import Button from "./Button.astro";
 
 interface Props {
 
-    category: string;
+    category:string;
 
-    title: string;
+    title:string;
 
-    tagline: string;
+    tagline:string;
 
-    description: string;
+    description:string;
 
-    status: string;
+    status:string;
 
-    href: string;
+    href:string;
 
-    featured?: boolean;
+    featured?:boolean;
 
 }
 
 const {
 
-    category,
+category,
 
-    title,
+title,
 
-    tagline,
+tagline,
 
-    description,
+description,
 
-    status,
+status,
 
-    href,
+href,
 
-    featured = false
+featured=false
 
-} = Astro.props;
+}=Astro.props;
 ---
 
 <article
-    class:list([
+class:list([
 
-        "rounded-[32px]",
+"group",
 
-        "border",
+"overflow-hidden",
 
-        "border-[var(--border)]",
+"rounded-[32px]",
 
-        "bg-[var(--surface)]",
+"border",
 
-        "transition-all duration-300",
+"border-[var(--border)]",
 
-        featured
-            ? "p-10 lg:p-12"
-            : "p-8",
+"bg-[var(--surface)]",
 
-        "hover:border-[var(--primary)]"
+"transition-all duration-500",
 
-    ])}
+"hover:border-[var(--primary)]",
+
+"hover:-translate-y-1",
+
+featured
+?"p-12"
+:"p-8"
+
+])}
 >
 
-    <div class="flex items-center justify-between">
+<div class="flex items-center justify-between">
 
-        <span
-            class="text-xs font-semibold uppercase tracking-[0.25em] text-[var(--primary)]"
-        >
+<span
+class="text-xs uppercase tracking-[0.28em] text-[var(--primary)]"
+>
 
-            {category}
+{category}
 
-        </span>
+</span>
 
-        <span
-            class="rounded-full border border-[var(--border)] px-3 py-1 text-xs"
-        >
+<span
+class="rounded-full border border-[var(--border)] px-3 py-1 text-xs"
+>
 
-            {status}
+{status}
 
-        </span>
+</span>
 
-    </div>
+</div>
 
-    <h3
-        class:list([
+<h3
+class:list([
 
-            "mt-8 font-bold tracking-tight",
+"mt-10 font-bold tracking-tight",
 
-            featured
-                ? "text-4xl lg:text-5xl"
-                : "text-2xl"
+featured
+?"text-5xl"
+:"text-3xl"
 
-        ])}
-    >
+])}
+>
 
-        {title}
+{title}
 
-    </h3>
+</h3>
 
-    <p
-        class="mt-4 text-lg font-medium text-white"
-    >
+<p
+class="mt-5 text-xl font-medium"
+>
 
-        {tagline}
+{tagline}
 
-    </p>
+</p>
 
-    <p
-        class="mt-6 max-w-2xl leading-8 text-[var(--foreground-secondary)]"
-    >
+<p
+class="mt-6 max-w-2xl leading-8 text-[var(--foreground-secondary)]"
+>
 
-        {description}
+{description}
 
-    </p>
+</p>
 
-    {
-        featured && (
+{
+featured&&(
 
-            <div
-                class="mt-10 flex flex-wrap gap-3"
-            >
+<div
+class="mt-10 flex flex-wrap gap-3"
+>
 
-                <span class="rounded-full bg-[var(--surface-secondary)] px-4 py-2 text-sm">
+<div class="rounded-xl bg-[var(--surface-secondary)] px-5 py-4">
 
-                    100+ Users
+<p class="text-xs text-[var(--foreground-secondary)]">
 
-                </span>
+Users
 
-                <span class="rounded-full bg-[var(--surface-secondary)] px-4 py-2 text-sm">
+</p>
 
-                    Chrome Extension
+<p class="mt-2 text-xl font-semibold">
 
-                </span>
+100+
 
-                <span class="rounded-full bg-[var(--surface-secondary)] px-4 py-2 text-sm">
+</p>
 
-                    Live Product
+</div>
 
-                </span>
+<div class="rounded-xl bg-[var(--surface-secondary)] px-5 py-4">
 
-            </div>
+<p class="text-xs text-[var(--foreground-secondary)]">
 
-        )
-    }
+Platform
 
-    <div class="mt-10">
+</p>
 
-        <Button
-            href={href}
-            variant={featured ? "primary" : "secondary"}
-        >
+<p class="mt-2 text-xl font-semibold">
 
-            View Case Study
+Chrome
 
-        </Button>
+</p>
 
-    </div>
+</div>
+
+<div class="rounded-xl bg-[var(--surface-secondary)] px-5 py-4">
+
+<p class="text-xs text-[var(--foreground-secondary)]">
+
+Status
+
+</p>
+
+<p class="mt-2 text-xl font-semibold">
+
+Live
+
+</p>
+
+</div>
+
+</div>
+
+)
+}
+
+<div class="mt-10">
+
+<Button
+href={href}
+variant={featured?"primary":"secondary"}
+>
+
+View Case Study
+
+</Button>
+
+</div>
 
 </article>
