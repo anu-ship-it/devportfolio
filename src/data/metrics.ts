@@ -1,22 +1,27 @@
 export const metrics = [
   {
     value: "100+",
-    label: "Chrome Users",
-    description: "Developers actively using TokenPulse",
+    label: "Active Users",
+    description: "Developers using TokenPulse every week.",
   },
+
   {
-    value: "3",
-    label: "Products",
-    description: "Built from idea to deployment",
+    value: "4",
+    label: "Intelligence Systems",
+    description: "Products solving real-world problems.",
   },
+
   {
     value: "AI",
     label: "Core Focus",
-    description: "Developer tools & intelligent workflows",
+    description: "Automation, intelligent systems and decision engines.",
   },
+
   {
     value: "24/7",
-    label: "Shipping",
-    description: "Always building and improving",
+    label: "Building",
+    description: "Continuously shipping, measuring and improving.",
   },
 ];
+
+export default metrics;
