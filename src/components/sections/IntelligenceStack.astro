@@ -1,104 +1,61 @@
 ---
-import Container from "../ui/Container.astro";
+import Section from "../ui/Section.astro";
+import Heading from "../ui/Heading.astro";
 
 const stack = [
-
   {
     title: "Developer Intelligence",
-    description:
-      "AI tooling that helps developers understand usage, costs and productivity.",
-
     product: "TokenPulse"
   },
-
   {
     title: "Knowledge Intelligence",
-    description:
-      "Systems that discover, evaluate and deliver the most valuable engineering knowledge.",
-
     product: "AI Dev Weekly"
   },
-
   {
     title: "Financial Intelligence",
-    description:
-      "AI-assisted market intelligence using historical data, news and multi-factor scoring.",
-
     product: "AlphaPulse"
   },
-
   {
     title: "Productivity Intelligence",
-    description:
-      "AI systems focused on automation, execution and intelligent workflows.",
-
     product: "Velra"
   }
-
 ];
 ---
 
-<section class="pb-24">
+<Section>
 
-  <Container>
+  <Heading
+    eyebrow="THE INTELLIGENCE STACK"
+    title="Four domains. One engineering philosophy."
+    description="Every product transforms complex data into decisions."
+  />
 
-    <div class="mb-16">
+  <div class="mt-16 grid gap-6 lg:grid-cols-2">
 
-      <p class="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--primary)]">
+    {
+      stack.map(item => (
 
-        THE INTELLIGENCE STACK
+        <div
+          class="rounded-[28px] border border-[var(--border)] p-8 transition-all duration-300 hover:border-[var(--primary)]"
+        >
 
-      </p>
+          <p
+            class="text-xs uppercase tracking-[0.25em] text-[var(--primary)]"
+          >
+            {item.product}
+          </p>
 
-      <h2 class="mt-5 text-5xl font-bold">
+          <h3
+            class="mt-4 text-2xl font-semibold"
+          >
+            {item.title}
+          </h3>
 
-        Four domains.
-        One engineering philosophy.
+        </div>
 
-      </h2>
+      ))
+    }
 
-      <p class="mt-6 max-w-2xl text-lg text-[var(--foreground-secondary)]">
+  </div>
 
-        Every product I build follows the same idea:
-        collect better information, extract meaningful signals
-        and transform them into decisions people can trust.
-
-      </p>
-
-    </div>
-
-    <div class="grid gap-6 lg:grid-cols-2">
-
-      {
-        stack.map((item) => (
-
-          <div class="rounded-2xl border border-[var(--border)] p-8 transition-all duration-300 hover:-translate-y-1 hover:border-[var(--border-light)]">
-
-            <p class="text-sm uppercase tracking-[0.2em] text-[var(--primary)]">
-
-              {item.product}
-
-            </p>
-
-            <h3 class="mt-4 text-3xl font-semibold">
-
-              {item.title}
-
-            </h3>
-
-            <p class="mt-5 leading-8 text-[var(--foreground-secondary)]">
-
-              {item.description}
-
-            </p>
-
-          </div>
-
-        ))
-      }
-
-    </div>
-
-  </Container>
-
-</section>
+</Section>
