@@ -1,0 +1,49 @@
+---
+import Container from "../ui/Container.astro";
+import Card from "../ui/Card.astro";
+import { metrics } from "../../data/metrics";
+---
+
+<section class="pb-24">
+
+  <Container>
+
+    <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+
+      {
+        metrics.map((metric) => (
+
+          <Card>
+
+            <div class="space-y-3">
+
+              <h3
+                class="text-4xl font-bold text-[var(--foreground)]"
+              >
+                {metric.value}
+              </h3>
+
+              <p
+                class="font-semibold text-white"
+              >
+                {metric.label}
+              </p>
+
+              <p
+                class="text-sm text-[var(--foreground-secondary)]"
+              >
+                {metric.description}
+              </p>
+
+            </div>
+
+          </Card>
+
+        ))
+      }
+
+    </div>
+
+  </Container>
+
+</section>

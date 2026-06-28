@@ -4,11 +4,13 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/layout/Navbar.astro";
 
 import Hero from "../components/sections/Hero.astro";
+import Metrics from "../components/sections/Metrics.astro";
+import FeaturedProducts from "../components/sections/FeaturedProducts.astro";
+
+import Footer from "../components/layout/Footer.astro";
 ---
 
-<BaseLayout
-  title="Anoop Kumar | Software Engineer"
->
+<BaseLayout title="Anoop Kumar | Software Engineer">
 
   <Navbar />
 
@@ -16,6 +18,12 @@ import Hero from "../components/sections/Hero.astro";
 
     <Hero />
 
+    <Metrics />
+
+    <FeaturedProducts />
+
   </main>
+
+  <Footer />
 
 </BaseLayout>
