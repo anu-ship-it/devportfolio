@@ -1,0 +1,80 @@
+---
+import Container from "../ui/Container.astro";
+import ProductCard from "../ui/ProductCard.astro";
+import { products } from "../../data/products";
+
+const featured = products.find(product => product.featured);
+
+const others = products.filter(product => !product.featured);
+---
+
+<section class="py-32">
+
+  <Container>
+
+    <div class="max-w-3xl">
+
+      <p
+        class="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--primary)]"
+      >
+        SYSTEMS IN PRODUCTION
+      </p>
+
+      <h2
+        class="mt-5 text-5xl font-bold tracking-tight"
+      >
+        Products solving real-world problems.
+      </h2>
+
+      <p
+        class="mt-6 text-lg leading-8 text-[var(--foreground-secondary)]"
+      >
+        Every product starts with a real problem, evolves through continuous
+        feedback and is designed around one goal—help people make better
+        decisions with intelligent software.
+      </p>
+
+    </div>
+
+    {
+      featured && (
+
+        <div class="mt-20">
+
+          <ProductCard
+            category={featured.category}
+            title={featured.name}
+            tagline={featured.tagline}
+            description={featured.description}
+            status={featured.status}
+            href={featured.href}
+            featured
+          />
+
+        </div>
+
+      )
+    }
+
+    <div class="mt-10 grid gap-8 lg:grid-cols-3">
+
+      {
+        others.map(product => (
+
+          <ProductCard
+            category={product.category}
+            title={product.name}
+            tagline={product.tagline}
+            description={product.description}
+            status={product.status}
+            href={product.href}
+          />
+
+        ))
+      }
+
+    </div>
+
+  </Container>
+
+</section>

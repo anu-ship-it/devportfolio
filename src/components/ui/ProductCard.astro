@@ -1,0 +1,84 @@
+---
+import Button from "./Button.astro";
+
+interface Props {
+  category: string;
+  title: string;
+  tagline: string;
+  description: string;
+  status: string;
+  href: string;
+  featured?: boolean;
+}
+
+const {
+  category,
+  title,
+  tagline,
+  description,
+  status,
+  href,
+  featured = false
+} = Astro.props;
+---
+
+<article
+  class:list={[
+    "group rounded-3xl border border-[var(--border)] bg-[var(--surface)] transition-all duration-300",
+    featured
+      ? "p-10 lg:p-12 hover:border-[var(--primary)]"
+      : "p-8 hover:-translate-y-1 hover:border-[var(--border-light)]"
+  ]}
+>
+
+  <div class="flex items-center justify-between">
+
+    <span
+      class="text-xs font-semibold uppercase tracking-[0.2em] text-[var(--primary)]"
+    >
+      {category}
+    </span>
+
+    <span
+      class="rounded-full border border-[var(--border)] px-3 py-1 text-xs"
+    >
+      {status}
+    </span>
+
+  </div>
+
+  <h3
+    class:list={[
+      "mt-8 font-bold tracking-tight",
+      featured
+        ? "text-5xl"
+        : "text-3xl"
+    ]}
+  >
+    {title}
+  </h3>
+
+  <p
+    class="mt-4 text-xl font-medium text-white"
+  >
+    {tagline}
+  </p>
+
+  <p
+    class="mt-6 max-w-2xl leading-8 text-[var(--foreground-secondary)]"
+  >
+    {description}
+  </p>
+
+  <div class="mt-10">
+
+    <Button
+      href={href}
+      variant={featured ? "primary" : "secondary"}
+    >
+      Explore System
+    </Button>
+
+  </div>
+
+</article>
