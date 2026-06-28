@@ -1,47 +1,56 @@
-import { cn } from "@/lib/cn";
-
-interface HeadingProps {
+---
+interface Props {
   eyebrow?: string;
-
   title: string;
-
   description?: string;
-
   align?: "left" | "center";
-
-  className?: string;
+  class?: string;
 }
 
-export default function Heading({
+const {
   eyebrow,
   title,
   description,
   align = "left",
-  className,
-}: HeadingProps) {
-  return (
-    <div
-      className={cn(
-        "space-y-5",
-        align === "center" && "mx-auto text-center",
-        className
-      )}
-    >
-      {eyebrow && (
-        <span className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--primary)]">
-          {eyebrow}
-        </span>
-      )}
+  class: className = "",
+} = Astro.props;
 
-      <h2 className="max-w-4xl text-4xl font-bold tracking-tight text-[var(--foreground)] md:text-5xl lg:text-6xl">
-        {title}
-      </h2>
+const alignment =
+  align === "center"
+    ? "mx-auto text-center"
+    : "";
+---
 
-      {description && (
-        <p className="max-w-2xl text-lg leading-8 text-[var(--foreground-secondary)]">
-          {description}
-        </p>
-      )}
-    </div>
-  );
-}
+<div
+  class:list={[
+    "space-y-5",
+    alignment,
+    className,
+  ]}
+>
+  {
+    eyebrow && (
+      <span
+        class="inline-block text-sm font-semibold uppercase tracking-[0.25em] text-[var(--primary)]"
+      >
+        {eyebrow}
+      </span>
+    )
+  }
+
+  <h2
+    class="max-w-5xl text-4xl font-bold tracking-tight text-[var(--foreground)] md:text-5xl lg:text-6xl"
+  >
+    {title}
+  </h2>
+
+  {
+    description && (
+      <p
+        class="max-w-2xl text-lg leading-8 text-[var(--foreground-secondary)]"
+      >
+        {description}
+      </p>
+    )
+  }
+</div>

@@ -1,29 +1,26 @@
-import type { HTMLAttributes, ReactNode } from "react";
-import { cn } from "@/lib/cn";
-
-interface SectionProps extends HTMLAttributes<HTMLElement> {
-  children: ReactNode;
-
+---
+interface Props {
+  class?: string;
   size?: "sm" | "md" | "lg";
 }
 
-export default function Section({
-  children,
-  className,
+const {
+  class: className = "",
   size = "md",
-  ...props
-}: SectionProps) {
-  return (
-    <section
-      className={cn(
-        size === "sm" && "py-16",
-        size === "md" && "py-24",
-        size === "lg" && "py-32",
-        className
-      )}
-      {...props}
-    >
-      {children}
-    </section>
-  );
-}
+} = Astro.props;
+
+const spacing = {
+  sm: "py-16",
+  md: "py-24",
+  lg: "py-32",
+};
+---
+
+<section
+  class:list={[
+    spacing[size],
+    className,
+  ]}
+>
+  <slot />
+</section>
