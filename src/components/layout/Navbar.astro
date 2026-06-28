@@ -1,72 +1,47 @@
 ---
 import Container from "../ui/Container.astro";
-import Button from "../ui/Button.astro";
 import site from "../../data/site";
-
-const navItems = [
-  {
-    title: "Products",
-    href: "/products",
-  },
-  {
-    title: "Writing",
-    href: "/writing",
-  },
-  {
-    title: "About",
-    href: "/about",
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-  },
-];
 ---
 
 <header
-  class="sticky top-0 z-50 border-b border-[var(--border)] bg-[rgba(9,9,11,.75)] backdrop-blur-xl"
+  class="sticky top-0 z-50 border-b border-[var(--border)] bg-black/70 backdrop-blur-xl"
 >
   <Container>
+
     <div class="flex h-20 items-center justify-between">
 
       <a
         href="/"
-        class="text-xl font-semibold tracking-tight"
+        class="text-lg font-semibold tracking-tight"
       >
         {site.shortName}
       </a>
 
       <nav class="hidden items-center gap-8 lg:flex">
+
         {
-          navItems.map((item) => (
+          site.navigation.map((item) => (
+
             <a
               href={item.href}
-              class="text-sm text-[var(--foreground-secondary)] transition-colors hover:text-white"
+              class="text-sm text-[var(--foreground-secondary)] transition hover:text-white"
             >
-              {item.title}
+              {item.label}
             </a>
+
           ))
         }
+
       </nav>
 
-      <div class="hidden items-center gap-3 lg:flex">
-
-        <Button
-          href="https://github.com/anu-ship-it"
-          variant="ghost"
-        >
-          GitHub
-        </Button>
-
-        <Button
-          href="/resume.pdf"
-          variant="primary"
-        >
-          Resume
-        </Button>
-
-      </div>
+      <a
+        href="/resume.pdf"
+        class="rounded-xl border border-[var(--border)] px-5 py-2.5 text-sm font-medium transition hover:bg-[var(--surface-secondary)]"
+      >
+        Resume
+      </a>
 
     </div>
+
   </Container>
 </header>
