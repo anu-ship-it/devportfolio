@@ -1,0 +1,79 @@
+---
+import Container from "../ui/Container.astro";
+import { philosophy } from "../../data/philosophy";
+---
+
+<section class="py-32">
+
+  <Container>
+
+    <div class="max-w-3xl">
+
+      <p
+        class="text-sm font-semibold uppercase tracking-[0.25em] text-[var(--primary)]"
+      >
+        ENGINEERING PHILOSOPHY
+      </p>
+
+      <h2
+        class="mt-5 text-5xl font-bold tracking-tight"
+      >
+        Every system follows the same process.
+      </h2>
+
+      <p
+        class="mt-6 text-lg leading-8 text-[var(--foreground-secondary)]"
+      >
+        Regardless of the industry—developer tools, financial intelligence,
+        productivity or AI automation—I follow the same engineering framework.
+      </p>
+
+    </div>
+
+    <div class="relative mt-20 max-w-4xl">
+
+      <div
+        class="absolute left-6 top-0 h-full w-px bg-[var(--border)]"
+      ></div>
+
+      <div class="space-y-14">
+
+        {
+          philosophy.map((step, index) => (
+
+            <div class="relative flex gap-8">
+
+              <div
+                class="relative z-10 flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[var(--primary)] bg-[var(--background)] font-semibold text-[var(--primary)]"
+              >
+                {index + 1}
+              </div>
+
+              <div>
+
+                <h3
+                  class="text-3xl font-semibold"
+                >
+                  {step.title}
+                </h3>
+
+                <p
+                  class="mt-3 max-w-2xl leading-8 text-[var(--foreground-secondary)]"
+                >
+                  {step.description}
+                </p>
+
+              </div>
+
+            </div>
+
+          ))
+        }
+
+      </div>
+
+    </div>
+
+  </Container>
+
+</section>
