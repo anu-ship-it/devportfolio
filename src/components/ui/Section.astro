@@ -1,26 +1,28 @@
 ---
+import Container from "./Container.astro";
+
 interface Props {
   class?: string;
-  size?: "sm" | "md" | "lg";
+  containerClass?: string;
 }
 
 const {
   class: className = "",
-  size = "md",
+  containerClass = ""
 } = Astro.props;
-
-const spacing = {
-  sm: "py-16",
-  md: "py-24",
-  lg: "py-32",
-};
 ---
 
 <section
   class:list={[
-    spacing[size],
-    className,
+    "py-24 lg:py-32",
+    className
   ]}
 >
-  <slot />
+
+  <Container class={containerClass}>
+
+    <slot />
+
+  </Container>
+
 </section>
