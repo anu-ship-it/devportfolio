@@ -4,44 +4,66 @@ import site from "../../data/site";
 ---
 
 <header
-  class="sticky top-0 z-50 border-b border-[var(--border)] bg-black/70 backdrop-blur-xl"
+    class="sticky top-0 z-50 border-b border-[var(--border)] bg-black/70 backdrop-blur-xl"
 >
-  <Container>
 
-    <div class="flex h-20 items-center justify-between">
+    <Container>
 
-      <a
-        href="/"
-        class="text-lg font-semibold tracking-tight"
-      >
-        {site.shortName}
-      </a>
-
-      <nav class="hidden items-center gap-8 lg:flex">
-
-        {
-          site.navigation.map((item) => (
+        <div class="flex h-20 items-center justify-between">
 
             <a
-              href={item.href}
-              class="text-sm text-[var(--foreground-secondary)] transition hover:text-white"
+                href="/"
+                class="flex flex-col"
             >
-              {item.label}
+
+                <span class="text-xl font-bold tracking-tight">
+
+                    {site.shortName}
+
+                </span>
+
+                <span
+                    class="text-xs text-[var(--foreground-secondary)]"
+                >
+
+                    AI Systems Engineer
+
+                </span>
+
             </a>
 
-          ))
-        }
+            <nav
+                class="hidden items-center gap-10 lg:flex"
+            >
 
-      </nav>
+                {
+                    site.navigation.map(item => (
 
-      <a
-        href="/resume.pdf"
-        class="rounded-xl border border-[var(--border)] px-5 py-2.5 text-sm font-medium transition hover:bg-[var(--surface-secondary)]"
-      >
-        Resume
-      </a>
+                        <a
+                            href={item.href}
+                            class="text-sm font-medium text-[var(--foreground-secondary)] transition hover:text-white"
+                        >
 
-    </div>
+                            {item.label}
 
-  </Container>
+                        </a>
+
+                    ))
+                }
+
+            </nav>
+
+            <a
+                href="/resume.pdf"
+                class="rounded-xl border border-[var(--border)] px-5 py-3 text-sm font-medium transition hover:bg-[var(--surface-secondary)]"
+            >
+
+                Resume
+
+            </a>
+
+        </div>
+
+    </Container>
+
 </header>

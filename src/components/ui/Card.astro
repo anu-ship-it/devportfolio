@@ -1,32 +1,25 @@
 ---
 interface Props {
-  hover?: boolean;
   class?: string;
+  hover?: boolean;
 }
 
 const {
-  hover = true,
   class: className = "",
+  hover = true
 } = Astro.props;
 ---
 
 <div
   class:list={[
-    "rounded-2xl",
-    "border",
-    "border-[var(--border)]",
+    "rounded-[28px]",
+    "border border-[var(--border)]",
     "bg-[var(--surface)]",
-    "p-6",
-    hover &&
-      [
-        "transition-all",
-        "duration-300",
-        "hover:-translate-y-1",
-        "hover:border-[var(--border-light)]",
-        "hover:bg-[var(--surface-secondary)]",
-      ],
-    className,
+    "p-8 lg:p-10",
+    "transition-all duration-300",
+    hover && "hover:-translate-y-1 hover:border-[var(--border-light)] hover:shadow-2xl",
+    className
   ]}
 >
-  <slot />
+    <slot />
 </div>

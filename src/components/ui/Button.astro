@@ -1,73 +1,54 @@
 ---
-type Variant = "primary" | "secondary" | "ghost";
-type Size = "sm" | "md" | "lg";
-
 interface Props {
-  href?: string;
-  type?: "button" | "submit" | "reset";
-  variant?: Variant;
-  size?: Size;
-  class?: string;
+
+    href: string;
+
+    variant?: "primary" | "secondary";
+
+    class?: string;
+
 }
 
 const {
-  href,
-  type = "button",
-  variant = "primary",
-  size = "md",
-  class: className = "",
+
+    href,
+
+    variant = "primary",
+
+    class: className = ""
+
 } = Astro.props;
-
-const variants = {
-  primary:
-    "bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)]",
-
-  secondary:
-    "border border-[var(--border)] bg-transparent text-[var(--foreground)] hover:bg-[var(--surface-secondary)]",
-
-  ghost:
-    "bg-transparent text-[var(--foreground)] hover:bg-[var(--surface-secondary)]",
-};
-
-const sizes = {
-  sm: "h-10 px-4 text-sm",
-
-  md: "h-11 px-5 text-sm",
-
-  lg: "h-12 px-6 text-base",
-};
-
-const classes = [
-  "inline-flex items-center justify-center gap-2",
-  "rounded-xl",
-  "font-medium",
-  "transition-all duration-200",
-  "hover:-translate-y-0.5",
-  "focus-visible:outline-none",
-  "focus-visible:ring-2",
-  "focus-visible:ring-[var(--primary)]",
-  "disabled:pointer-events-none",
-  "disabled:opacity-50",
-  variants[variant],
-  sizes[size],
-  className,
-];
 ---
 
-{
-  href ? (
-    <a
-      href={href}
-      class:list={classes}
-    >
-      <slot />
-    </a>
-  ) : (
-    <button
-      type={type}
-      class:list={classes}
-    >
-      <slot />
-    </button>
-  )
-}
+<a
+    href={href}
+    class:list={[
+
+        "inline-flex items-center justify-center",
+
+        "rounded-2xl",
+
+        "px-6",
+
+        "py-3.5",
+
+        "text-sm",
+
+        "font-semibold",
+
+        "transition-all duration-300",
+
+        "hover:-translate-y-0.5",
+
+        variant === "primary"
+            ? "bg-white text-black hover:opacity-90"
+            : "border border-[var(--border)] bg-transparent hover:bg-[var(--surface-secondary)]",
+
+        className
+
+    ]}
+>
+
+    <slot />
+
+</a>

@@ -3,42 +3,118 @@ import Section from "../ui/Section.astro";
 import Button from "../ui/Button.astro";
 ---
 
-<Section class="pt-16 lg:pt-24">
+<Section class="pt-14 lg:pt-20">
 
-    <div class="max-w-5xl">
+    <div class="grid items-center gap-16 lg:grid-cols-[1.2fr_0.8fr]">
 
-        <span
-            class="inline-flex items-center rounded-full border border-[var(--border)] px-4 py-2 text-sm font-medium text-[var(--primary)]"
-        >
-            AI Systems Engineer
-        </span>
+        <!-- Left -->
 
-        <h1
-            class="mt-8 max-w-5xl text-5xl font-bold leading-[1.05] tracking-tight md:text-6xl lg:text-7xl"
-        >
-            Building intelligent systems that transform complex data into actionable decisions.
-        </h1>
+        <div>
 
-        <p
-            class="mt-8 max-w-2xl text-lg leading-8 text-[var(--foreground-secondary)]"
-        >
-            I build AI-powered products that collect information, extract meaningful
-            signals and help developers, businesses and investors make better
-            decisions through intelligent software.
-        </p>
-
-        <div class="mt-12 flex flex-wrap gap-4">
-
-            <Button href="/systems">
-                Explore Systems
-            </Button>
-
-            <Button
-                href="/resume.pdf"
-                variant="secondary"
+            <span
+                class="inline-flex rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-2 text-sm font-medium text-[var(--primary)]"
             >
-                Download Resume
-            </Button>
+                AI Systems Engineer
+            </span>
+
+            <h1
+                class="mt-8 text-5xl font-bold leading-[1.05] tracking-tight lg:text-7xl"
+            >
+                Building intelligent systems that transform complex data into actionable decisions.
+            </h1>
+
+            <p
+                class="mt-8 max-w-xl text-lg leading-8 text-[var(--foreground-secondary)]"
+            >
+                I build AI-powered products that collect information,
+                extract meaningful insights and help developers,
+                businesses and investors make better decisions.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+
+                <Button href="/systems">
+
+                    Explore Systems
+
+                </Button>
+
+                <Button
+                    href="/resume.pdf"
+                    variant="secondary"
+                >
+
+                    Resume
+
+                </Button>
+
+            </div>
+
+        </div>
+
+        <!-- Right -->
+
+        <div
+            class="rounded-[32px] border border-[var(--border)] bg-[var(--surface)] p-8"
+        >
+
+            <p
+                class="text-xs uppercase tracking-[0.3em] text-[var(--primary)]"
+            >
+                CURRENT FOCUS
+            </p>
+
+            <div class="mt-8 space-y-6">
+
+                <div>
+
+                    <p class="text-sm text-[var(--foreground-secondary)]">
+                        Flagship Product
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-semibold">
+                        TokenPulse
+                    </h3>
+
+                </div>
+
+                <div>
+
+                    <p class="text-sm text-[var(--foreground-secondary)]">
+                        Users
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-semibold">
+                        100+
+                    </h3>
+
+                </div>
+
+                <div>
+
+                    <p class="text-sm text-[var(--foreground-secondary)]">
+                        Building
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-semibold">
+                        Velra
+                    </h3>
+
+                </div>
+
+                <div>
+
+                    <p class="text-sm text-[var(--foreground-secondary)]">
+                        Research
+                    </p>
+
+                    <h3 class="mt-2 text-2xl font-semibold">
+                        AlphaPulse
+                    </h3>
+
+                </div>
+
+            </div>
 
         </div>
 
