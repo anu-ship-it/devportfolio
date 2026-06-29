@@ -1,7 +1,7 @@
 ---
 import Section from "../ui/Section.astro";
 import Heading from "../ui/Heading.astro";
-import ProductCard from "../ui/ProductCard.astro";
+import SystemCard from "../ui/SystemCard.astro";
 import { products } from "../../data/products";
 
 const featured = products.find((p) => p.featured);
@@ -21,7 +21,7 @@ const others = products.filter((p) => !p.featured);
 
             <div class="mt-20">
 
-                <ProductCard
+                <SystemCard
                     {...featured}
                     featured
                 />
@@ -46,7 +46,7 @@ const others = products.filter((p) => !p.featured);
                     ]}
                 >
 
-                    <ProductCard
+                    <SystemCard
                         {...product}
                     />
 
