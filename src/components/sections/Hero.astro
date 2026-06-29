@@ -8,7 +8,7 @@ import Button from "../ui/Button.astro";
     <div class="grid items-center gap-32 xl:grid-cols-[820px_500px]">
       <!-- LEFT -->
 
-      <div class="max-w-[820px]">
+      <div class="max-w-[760px]">
         <div
           class="inline-flex items-center gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)] px-5 py-2.5"
         >
@@ -73,11 +73,11 @@ import Button from "../ui/Button.astro";
 
       <!-- RIGHT -->
 
-      <div class="justify-self-end self-start pt-6">
+      <div class="justify-self-end self-start pt-2">
         <div
-          class="w-[520px] rounded-[36px] border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.02] p-9 shadow-[0_35px_80px_rgba(0,0,0,.45)] backdrop-blur-xl"
+          class="w-[560px] rounded-[36px] border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.02] p-12 shadow-[0_35px_80px_rgba(0,0,0,.45)] backdrop-blur-xl"
         >
-          <div class="flex items-center justify-between">
+          <div class="flex items-center justify-between py-2">
             <div class="flex items-center gap-2">
               <div class="h-2.5 w-2.5 rounded-full bg-emerald-400"></div>
 
@@ -85,7 +85,7 @@ import Button from "../ui/Button.astro";
             </div>
 
             <span
-              class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300"
+              class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-2 text-xs text-emerald-300"
             >
               Active
             </span>
@@ -93,84 +93,84 @@ import Button from "../ui/Button.astro";
 
           <h2 class="mt-8 text-4xl font-bold">TokenPulse</h2>
 
-          <p class="mt-4 leading-7 text-[var(--foreground-secondary)]">
+          <p class="mt-8 leading-8 text-lg text-[var(--foreground-secondary)]">
             AI token analytics, usage tracking and cost intelligence for
             ChatGPT, Claude and Gemini.
           </p>
 
-          <div class="my-8 h-px bg-[var(--border)]"></div>
+          <div class="my-12 h-px bg-[var(--border)]"></div>
 
-          <div class="space-y-5">
-            <div class="flex justify-between">
-              <span class="text-zinc-500">Version</span>
+          <div class="space-y-8">
+            <div class="flex items-center justify-between py-2">
+              <span class="text-sm uppercase tracking-wide text-zinc-400">Version</span>
 
               <span>v2.1.0</span>
             </div>
 
-            <div class="flex justify-between">
-              <span class="text-zinc-500">Platform</span>
+            <div class="flex items-center justify-between py-2">
+              <span class="text-sm uppercase tracking-wide text-zinc-400">Platform</span>
 
               <span>Chrome + Edge</span>
             </div>
 
-            <div class="flex justify-between">
-              <span class="text-zinc-500">AI Models</span>
+            <div class="flex items-center justify-between py-2">
+              <span class="text-sm uppercase tracking-wide text-zinc-400">AI Models</span>
 
               <span>GPT • Claude • Gemini</span>
             </div>
 
-            <div class="flex justify-between">
-              <span class="text-zinc-500">Status</span>
+            <div class="flex items-center justify-between py-2">
+              <span class="text-sm uppercase tracking-wide text-zinc-400">Status</span>
 
               <span class="text-emerald-400"> Live </span>
             </div>
           </div>
 
-          <div class="my-8 h-px bg-[var(--border)]"></div>
+          <div class="my-10 h-px bg-[var(--border)]"></div>
 
-          <h3 class="text-sm uppercase tracking-[0.25em] text-zinc-500">
+          <h3 class="mt-12 text-sm uppercase tracking-[0.25em] text-zinc-400">
             Product Roadmap
           </h3>
 
-          <div class="mt-6 space-y-5">
-            <div class="flex items-center justify-between">
+          <div class="mt-12 space-y-6">
+            <div class="flex items-center justify-between py-2">
               <div class="flex items-center gap-3">
                 <div class="h-2.5 w-2.5 rounded-full bg-emerald-400"></div>
 
                 <span>TokenPulse</span>
               </div>
 
-              <span class="text-sm text-zinc-500"> Live </span>
+              <span class="text-sm text-zinc-400"> Live </span>
             </div>
 
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between py-2">
               <div class="flex items-center gap-3">
                 <div class="h-2.5 w-2.5 rounded-full bg-amber-400"></div>
 
                 <span>Velra</span>
               </div>
 
-              <span class="text-sm text-zinc-500"> Development </span>
+              <span class="text-sm text-zinc-400"> Development </span>
             </div>
 
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between py-2">
               <div class="flex items-center gap-3">
                 <div class="h-2.5 w-2.5 rounded-full bg-amber-400"></div>
 
                 <span>AI Dev Weekly</span>
               </div>
 
-              <span class="text-sm text-zinc-500"> Beta </span>
+              <span class="text-sm text-zinc-400"> Beta </span>
             </div>
 
-            <div class="flex items-center justify-between">
+            <div class="flex items-center justify-between py-2">
               <div class="flex items-center gap-3">
                 <div class="h-2.5 w-2.5 rounded-full bg-sky-400"></div>
 
                 <span>AlphaPulse</span>
               </div>
 
-              <span class="text-sm text-zinc-500"> Research </span>
+              <span class="text-sm text-zinc-400"> Research </span>
             </div>
           </div>
         </div>
@@ -179,7 +179,7 @@ import Button from "../ui/Button.astro";
   </div>
 
   <div class="mt-24 flex justify-center">
-    <div class="flex flex-col items-center gap-3 text-zinc-500">
+    <div class="flex flex-col items-center gap-3 text-zinc-400">
       <span class="text-xs uppercase tracking-[0.35em]">
         Scroll to Explore
       </span>
