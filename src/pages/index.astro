@@ -5,35 +5,30 @@ import Navbar from "../components/layout/Navbar.astro";
 import Footer from "../components/layout/Footer.astro";
 
 import Hero from "../components/sections/Hero.astro";
-import IntelligenceStack from "../components/sections/IntelligenceStack.astro";
 import SystemsInProduction from "../components/sections/SystemsInProduction.astro";
 import EngineeringPhilosophy from "../components/sections/EngineeringPhilosophy.astro";
 import CurrentMission from "../components/sections/CurrentMission.astro";
-import WritingPreview from "../components/sections/WritingPreview.astro";
 import ContactCTA from "../components/sections/ContactCTA.astro";
-import Metrics from "../components/sections/Metrics.astro";
 ---
 
 <BaseLayout title="Anoop Kumar | AI Systems Engineer">
-  <Navbar />
 
-  <main>
-    <Hero />
+    <Navbar />
 
-    <Metrics />
+    <main>
 
-    <IntelligenceStack />
+        <Hero />
 
-    <SystemsInProduction />
+        <SystemsInProduction />
 
-    <EngineeringPhilosophy />
+        <EngineeringPhilosophy />
 
-    <CurrentMission />
+        <CurrentMission />
 
-    <WritingPreview />
+        <ContactCTA />
 
-    <ContactCTA />
-  </main>
+    </main>
 
-  <Footer />
+    <Footer />
+
 </BaseLayout>
