@@ -3,189 +3,493 @@ import Section from "../ui/Section.astro";
 import Button from "../ui/Button.astro";
 ---
 
-<Section class="min-h-screen flex items-center pt-36">
-  <div class="mx-auto w-full max-w-[1400px]">
-    <div class="grid items-center gap-32 xl:grid-cols-[820px_500px]">
-      <!-- LEFT -->
+<Section class="flex min-h-screen items-center pt-28 pb-24">
 
-      <div class="max-w-[760px]">
+  <div class="mx-auto w-full max-w-[1320px]">
+
+    <div
+      class="grid items-center gap-24 xl:grid-cols-[680px_560px]"
+    >
+
+      <!-- LEFT COLUMN -->
+
+      <div class="max-w-[640px]">
+
+        <!-- Badge -->
+
         <div
           class="inline-flex items-center gap-3 rounded-full border border-[var(--border)] bg-[var(--surface)] px-5 py-2.5"
         >
-          <div class="h-2 w-2 rounded-full bg-emerald-400"></div>
 
-          <span class="text-sm font-medium tracking-wide">
+          <div
+            class="h-2.5 w-2.5 rounded-full bg-emerald-400"
+          ></div>
+
+          <span
+            class="text-sm font-medium tracking-wide"
+          >
+
             AI Systems Engineer
+
           </span>
+
         </div>
 
+        <!-- Heading -->
+
         <h1
-          class="mt-8 text-5xl font-black leading-[0.98] tracking-[-0.055em] xl:text-[5rem]"
+          class="mt-6 max-w-[640px] text-5xl font-black leading-[1.02] tracking-[-0.05em] xl:text-[4.4rem]"
         >
-          Building intelligent systems
+
+          Building intelligent
 
           <br />
 
-          that transform complex
+          systems that transform
 
           <br />
 
-          data into actionable decisions.
+          complex data into
+
+          <br />
+
+          actionable decisions.
+
         </h1>
 
+        <!-- Description -->
+
         <p
-          class="mt-8 max-w-xl text-lg leading-8 text-[var(--foreground-secondary)]"
+          class="mt-10 max-w-[560px] text-lg leading-8 text-[var(--foreground-secondary)]"
         >
-          Building AI products across developer tools, financial intelligence,
-          automation and modern software engineering.
+
+          Building AI products across developer tools,
+          financial intelligence, automation and modern
+          software engineering.
+
         </p>
 
         <!-- Trust -->
 
-        <div class="mt-10 space-y-4">
-          <div class="flex items-center gap-3">
-            <div class="h-2 w-2 rounded-full bg-emerald-400"></div>
+        <div
+          class="mt-12 space-y-5"
+        >
 
-            <span>100+ Active Users</span>
+          <div
+            class="flex items-center gap-3"
+          >
+
+            <div
+              class="h-2.5 w-2.5 rounded-full bg-emerald-400"
+            ></div>
+
+            <span
+              class="text-[15px]"
+            >
+
+              100+ Developers actively using TokenPulse
+
+            </span>
+
           </div>
 
-          <div class="flex items-center gap-3">
-            <div class="h-2 w-2 rounded-full bg-emerald-400"></div>
+          <div
+            class="flex items-center gap-3"
+          >
 
-            <span>Shipping New Features Weekly</span>
+            <div
+              class="h-2.5 w-2.5 rounded-full bg-emerald-400"
+            ></div>
+
+            <span
+              class="text-[15px]"
+            >
+
+              Shipping improvements every week
+
+            </span>
+
           </div>
 
-          <div class="flex items-center gap-3">
-            <div class="h-2 w-2 rounded-full bg-emerald-400"></div>
+          <div
+            class="flex items-center gap-3"
+          >
 
-            <span>Building 4 AI Systems</span>
+            <div
+              class="h-2.5 w-2.5 rounded-full bg-emerald-400"
+            ></div>
+
+            <span
+              class="text-[15px]"
+            >
+
+              Building four AI products simultaneously
+
+            </span>
+
           </div>
+
         </div>
 
         <!-- CTA -->
 
-        <div class="mt-12 flex gap-5">
-          <Button href="/projects"> Explore Products </Button>
+        <div
+          class="mt-14 flex flex-wrap gap-5"
+        >
 
-          <Button href="/resume.pdf" variant="secondary"> Resume </Button>
+          <Button href="/projects">
+
+            Explore Products
+
+          </Button>
+
+          <Button
+            href="/resume.pdf"
+            variant="secondary"
+          >
+
+            Resume
+
+          </Button>
+
         </div>
+
       </div>
 
-      <!-- RIGHT -->
+      <!-- RIGHT COLUMN -->
 
-      <div class="justify-self-end self-start pt-2">
-        <div
-          class="w-[560px] rounded-[36px] border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.02] p-12 shadow-[0_35px_80px_rgba(0,0,0,.45)] backdrop-blur-xl"
+      <div
+        class="justify-self-end self-center"
+      >
+
+        <article
+          class="w-[540px] rounded-[36px] border border-white/10 bg-gradient-to-b from-white/5 to-white/[0.02] p-12 shadow-[0_35px_80px_rgba(0,0,0,.45)] backdrop-blur-xl transition-all duration-300 hover:border-emerald-400/30 hover:shadow-[0_35px_100px_rgba(16,185,129,.08)]"
         >
-          <div class="flex items-center justify-between py-2">
-            <div class="flex items-center gap-2">
-              <div class="h-2.5 w-2.5 rounded-full bg-emerald-400"></div>
 
-              <span class="text-xs uppercase tracking-[0.28em]"> LIVE </span>
+          <!-- Header -->
+
+          <div
+            class="flex items-center justify-between"
+          >
+
+            <div
+              class="flex items-center gap-3"
+            >
+
+              <div
+                class="h-2.5 w-2.5 rounded-full bg-emerald-400"
+              ></div>
+
+              <span
+                class="text-xs uppercase tracking-[0.28em]"
+              >
+
+                LIVE
+
+              </span>
+
             </div>
 
             <span
-              class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-3 py-2 text-xs text-emerald-300"
+              class="rounded-full border border-emerald-400/30 bg-emerald-400/10 px-4 py-2 text-xs font-medium text-emerald-300"
             >
+
               Active
+
             </span>
+
           </div>
 
-          <h2 class="mt-8 text-4xl font-bold">TokenPulse</h2>
+          <!-- Product -->
 
-          <p class="mt-8 leading-8 text-lg text-[var(--foreground-secondary)]">
-            AI token analytics, usage tracking and cost intelligence for
-            ChatGPT, Claude and Gemini.
+          <h2
+            class="mt-6 text-4xl font-bold tracking-tight"
+          >
+
+            TokenPulse
+
+          </h2>
+
+          <p
+            class="mt-6 text-lg leading-8 text-[var(--foreground-secondary)]"
+          >
+
+            AI token analytics, usage tracking and cost intelligence
+            for ChatGPT, Claude and Gemini.
+
           </p>
 
-          <div class="my-12 h-px bg-[var(--border)]"></div>
+          <div
+            class="my-12 h-px bg-[var(--border)]"
+          ></div>
+                    <!-- Product Details -->
 
-          <div class="space-y-8">
-            <div class="flex items-center justify-between py-2">
-              <span class="text-sm uppercase tracking-wide text-zinc-400">Version</span>
+          <div
+            class="space-y-7"
+          >
 
-              <span>v2.1.0</span>
+            <div
+              class="flex items-center justify-between py-2"
+            >
+
+              <span
+                class="text-sm uppercase tracking-[0.22em] text-zinc-400"
+              >
+
+                Version
+
+              </span>
+
+              <span
+                class="font-medium"
+              >
+
+                v2.1.0
+
+              </span>
+
             </div>
 
-            <div class="flex items-center justify-between py-2">
-              <span class="text-sm uppercase tracking-wide text-zinc-400">Platform</span>
+            <div
+              class="flex items-center justify-between py-2"
+            >
 
-              <span>Chrome + Edge</span>
+              <span
+                class="text-sm uppercase tracking-[0.22em] text-zinc-400"
+              >
+
+                Platform
+
+              </span>
+
+              <span
+                class="font-medium"
+              >
+
+                Chrome + Edge
+
+              </span>
+
             </div>
 
-            <div class="flex items-center justify-between py-2">
-              <span class="text-sm uppercase tracking-wide text-zinc-400">AI Models</span>
+            <div
+              class="flex items-center justify-between py-2"
+            >
 
-              <span>GPT • Claude • Gemini</span>
+              <span
+                class="text-sm uppercase tracking-[0.22em] text-zinc-400"
+              >
+
+                AI Models
+
+              </span>
+
+              <span
+                class="font-medium"
+              >
+
+                GPT • Claude • Gemini
+
+              </span>
+
             </div>
 
-            <div class="flex items-center justify-between py-2">
-              <span class="text-sm uppercase tracking-wide text-zinc-400">Status</span>
+            <div
+              class="flex items-center justify-between py-2"
+            >
 
-              <span class="text-emerald-400"> Live </span>
+              <span
+                class="text-sm uppercase tracking-[0.22em] text-zinc-400"
+              >
+
+                Status
+
+              </span>
+
+              <span
+                class="font-medium text-emerald-400"
+              >
+
+                Live
+
+              </span>
+
             </div>
+
           </div>
 
-          <div class="my-10 h-px bg-[var(--border)]"></div>
+          <div
+            class="my-12 h-px bg-[var(--border)]"
+          ></div>
 
-          <h3 class="mt-12 text-sm uppercase tracking-[0.25em] text-zinc-400">
+          <!-- Roadmap -->
+
+          <h3
+            class="text-sm uppercase tracking-[0.28em] text-zinc-400"
+          >
+
             Product Roadmap
+
           </h3>
 
-          <div class="mt-12 space-y-6">
-            <div class="flex items-center justify-between py-2">
-              <div class="flex items-center gap-3">
-                <div class="h-2.5 w-2.5 rounded-full bg-emerald-400"></div>
+          <div
+            class="mt-10 space-y-6"
+          >
 
-                <span>TokenPulse</span>
+            <div
+              class="flex items-center justify-between"
+            >
+
+              <div
+                class="flex items-center gap-3"
+              >
+
+                <div
+                  class="h-2.5 w-2.5 rounded-full bg-emerald-400"
+                ></div>
+
+                <span>
+
+                  TokenPulse
+
+                </span>
+
               </div>
 
-              <span class="text-sm text-zinc-400"> Live </span>
+              <span
+                class="text-sm text-zinc-400"
+              >
+
+                Live
+
+              </span>
+
             </div>
 
-            <div class="flex items-center justify-between py-2">
-              <div class="flex items-center gap-3">
-                <div class="h-2.5 w-2.5 rounded-full bg-amber-400"></div>
+            <div
+              class="flex items-center justify-between"
+            >
 
-                <span>Velra</span>
+              <div
+                class="flex items-center gap-3"
+              >
+
+                <div
+                  class="h-2.5 w-2.5 rounded-full bg-amber-400"
+                ></div>
+
+                <span>
+
+                  Velra
+
+                </span>
+
               </div>
 
-              <span class="text-sm text-zinc-400"> Development </span>
+              <span
+                class="text-sm text-zinc-400"
+              >
+
+                Development
+
+              </span>
+
             </div>
 
-            <div class="flex items-center justify-between py-2">
-              <div class="flex items-center gap-3">
-                <div class="h-2.5 w-2.5 rounded-full bg-amber-400"></div>
+            <div
+              class="flex items-center justify-between"
+            >
 
-                <span>AI Dev Weekly</span>
+              <div
+                class="flex items-center gap-3"
+              >
+
+                <div
+                  class="h-2.5 w-2.5 rounded-full bg-amber-400"
+                ></div>
+
+                <span>
+
+                  AI Dev Weekly
+
+                </span>
+
               </div>
 
-              <span class="text-sm text-zinc-400"> Beta </span>
+              <span
+                class="text-sm text-zinc-400"
+              >
+
+                Beta
+
+              </span>
+
             </div>
 
-            <div class="flex items-center justify-between py-2">
-              <div class="flex items-center gap-3">
-                <div class="h-2.5 w-2.5 rounded-full bg-sky-400"></div>
+            <div
+              class="flex items-center justify-between"
+            >
 
-                <span>AlphaPulse</span>
+              <div
+                class="flex items-center gap-3"
+              >
+
+                <div
+                  class="h-2.5 w-2.5 rounded-full bg-sky-400"
+                ></div>
+
+                <span>
+
+                  AlphaPulse
+
+                </span>
+
               </div>
 
-              <span class="text-sm text-zinc-400"> Research </span>
+              <span
+                class="text-sm text-zinc-400"
+              >
+
+                Research
+
+              </span>
+
             </div>
+
           </div>
-        </div>
+
+        </article>
+
       </div>
+
     </div>
+
+    <!-- Scroll Indicator -->
+
+    <div
+      class="mt-16 flex justify-center"
+    >
+
+      <div
+        class="flex flex-col items-center gap-3 text-zinc-400"
+      >
+
+        <span
+          class="text-xs uppercase tracking-[0.35em]"
+        >
+
+          Scroll to Explore
+
+        </span>
+
+        <div
+          class="h-12 w-px bg-gradient-to-b from-zinc-500 to-transparent"
+        ></div>
+
+      </div>
+
+    </div>
+
   </div>
 
-  <div class="mt-24 flex justify-center">
-    <div class="flex flex-col items-center gap-3 text-zinc-400">
-      <span class="text-xs uppercase tracking-[0.35em]">
-        Scroll to Explore
-      </span>
-
-      <div class="h-12 w-px bg-gradient-to-b from-zinc-500 to-transparent">
-      </div>
-    </div>
-  </div>
 </Section>
