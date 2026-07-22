@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 
 const socials = [
-  { icon: Link2, label: "GitHub", handle: "@anoop", href: "#" },
+  { icon: Link2, label: "GitHub", handle: "@anu-ship-it", href: "#" },
   { icon: Globe, label: "LinkedIn", handle: "in/anoop", href: "#" },
   { icon: AtSign, label: "Twitter", handle: "@anoop_ai", href: "#" },
   { icon: Mail, label: "Email", handle: "anoop@example.com", href: "mailto:anoop@example.com" },
